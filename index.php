@@ -8,8 +8,8 @@ function __autoload($className) {
 $route = $_GET['r'];
 $routeData = explode('/', $route);
 
-$controllerName = $routeData[0];
-$actionName = $routeData[1];
+$controllerName = '\core\controllers\\' . ucfirst($routeData[0]) . 'Controller';
+$actionName = 'action' . ucfirst($routeData[1]);
 
-var_dump($_GET);
-var_dump($routeData);
+$controller = new $controllerName;
+echo $controller->$actionName();
