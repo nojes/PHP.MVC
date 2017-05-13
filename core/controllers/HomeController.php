@@ -1,10 +1,12 @@
 <?php
 namespace core\controllers;
 
+use app\controllers\Controller;
+
 /**
  * Home controller.
  */
-class HomeController
+class HomeController extends Controller
 {
     /**
      * Index action.
@@ -13,6 +15,8 @@ class HomeController
      */
     public function actionIndex()
     {
+
+
         return 'Hello World!';
     }
 }
